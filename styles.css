@@ -1,0 +1,364 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+
+/* Sidebar Styling */
+.gymshark-sidebar {
+    width: 60px;
+    background-color: #111; 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); 
+}
+.gymshark-profile {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px solid #fff; 
+}
+.sidebar-icon {
+    width: 24px;
+    height: 24px;
+    margin: 15px 0;
+    cursor: pointer;
+    filter: brightness(0) invert(0.8);
+    transition: filter 0.3s, transform 0.3s;
+}
+.sidebar-icon:hover {
+    filter: brightness(1) invert(1);
+    transform: scale(1.1);
+}
+.gymshark-sidebar-top, .gymshark-sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.gymshark-sidebar-bottom {
+    margin-top: auto;
+}
+
+/* Main Container */
+.gymshark-container {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Hero Section */
+.gymshark-hero {
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #333, #111);
+}
+.gymshark-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.gymshark-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+.hero-button {
+    background-color: #fff;
+    color: #111;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: background 0.3s ease;
+}
+.hero-button:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Hero Top and Bottom Sections */
+.gymshark-hero-top {
+    width: 100%;
+    height: 50%;
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.gymshark-hero-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.gymshark-hero-bottom {
+    width: 100%;
+    height: 50%;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+/* Hero Text and Buttons */
+.gymshark-hero-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.gymshark-hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+.gymshark-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.gymshark-button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #000;
+}
+.gymshark-btn-primary {
+    background-color: #fff;
+}
+.gymshark-btn-secondary {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Clients Section */
+.gymshark-clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    width: fit-content;
+    margin: 0 auto;
+}
+.gymshark-client-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+.gymshark-client-img:not(:first-child) {
+    margin-left: -15px;
+}
+.gymshark-client-text {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Pricing Container */
+.gymshark-pricing-container {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+.gymshark-pricing-container h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+.gymshark-pricing-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #222;
+    margin-bottom: 10px;
+}
+.subscription-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    flex: 1;
+}
+.subscription-price {
+    color: #ccc;
+    font-size: 14px;
+    text-align: center;
+    flex: 1;
+}
+.gymshark-status {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.status-paid {
+    background-color: #28a745;
+    color: #000;
+}
+.status-expiring {
+    background-color: #ffc107;
+    color: #000;
+}
+.status-canceled {
+    background-color: #dc3545;
+    color: #fff;
+}
+.more-options {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.more-options:hover {
+    color: #fff;
+}
+.gymshark-see-all {
+    text-align: right;
+    margin-top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.gymshark-see-all:hover {
+    color: #ccc;
+}
+
+/* Subscription Section */
+.gymshark-subscription {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+.plan-radio {
+    display: none;
+}
+.gymshark-sub-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    flex: 1;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+.plan-radio:checked + .gymshark-sub-card {
+    border-color: #FFF;
+    box-shadow: 0 4px 15px rgb(247, 247, 247);
+    transform: scale(1.05);
+}
+.gymshark-sub-card ul {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+    color: #ccc;
+    font-size: 14px;
+    margin: 20px 0 0;
+}
+.gymshark-sub-card .price {
+    font-size: 36px;
+    margin: 20px 0;
+    color: #fff;
+}
+.gymshark-sub-card .price span {
+    font-size: 16px;
+    color: #ccc;
+}
+.gymshark-sub-button {
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.gymshark-sub-card.free { background-color: #333; }
+.gymshark-sub-card.starter { background-color: #444; }
+.gymshark-sub-card.pro { background-color: #555; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gymshark-sidebar {
+        width: 100%; /* Full width */
+        height: 60px; /* Adjust the height as needed */
+        position: fixed;
+        bottom: 0; /* Position at the bottom */
+        left: 0;
+        flex-direction: row; /* Arrange icons in a row */
+        padding: 10px 0;
+        justify-content: space-around; /* Evenly distribute icons */
+        background-color: #111; /* Match the desired background color */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    }
+
+    .gymshark-profile {
+        display: none; /* Hide profile image if not needed in this view */
+    }
+
+    .gymshark-sidebar-top, .gymshark-sidebar-bottom {
+        flex-direction: row;
+        align-items: center;
+        gap: 0; /* Remove extra gap */
+    }
+
+    .sidebar-icon {
+        margin: 0; /* Remove margin */
+        width: 28px; /* Adjust size for better fit */
+        height: 28px; /* Adjust size for better fit */
+    }
+}
